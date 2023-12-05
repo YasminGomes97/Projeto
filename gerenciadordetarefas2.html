@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/styletarefa2.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"
+        defer> </script>
+        <script src="/assets/javascript/edit-task.js" defer></script>
+    <title>Gerenciador de Tarefas 2</title>
+</head>
+
+<body>
+    <main class="d-flex flex-column justify-content-center align-items-center w-100">
+        <div class="content__form d-flex flex-column justify-content-center align-items-center w-100 ">
+            <h1>Gerenciador de Tarefas</h1>
+            <form class="task w-75">
+                <div class="form-group tarefa mb-2">
+                    <input type="text" id="inputTitle" class="form-control" placeholder="Tarefa">
+                </div>
+                <div class="informaction form-group mb-2 d-flex gap-3">
+                    <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="inputDateStart"
+                        class="form-control" placeholder="Data Início">
+                    <input type="text" onfocus="(this.type='time')" onblur="(this.type='text')" id="inputTimeStart"
+                        class="form-control" placeholder="Hora Início">
+                </div>
+                <div class="informaction2 form-group d-flex gap-3 mb-2">
+                    <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="inputDateEnd"
+                        class="form-control" placeholder="Data Término">
+                    <input type="text" onfocus="(this.type='time')" onblur="(this.type='text')" id="inputTimeEnd"
+                        class="form-control" placeholder="Hora Término">
+                </div>
+                <div class="form-group mb-3 ">
+                    <textarea class="form-control" id="inputDescription" rows="3" placeholder="Descrição"></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="button_form" id="alterButton">
+
+        </div>
+    </main>
+    <div id="confirmDeleteTaks" class="alert alert-danger alert-task  align-items-center fade  align-self-center " role="alert">
+        <h3 class=" h3 text-center text-dark">Deseja Realmente Excluir a Tarefa?</h3>
+        <div id="confirmDeleteButtons" class=" w-100 d-flex justify-content-around">
+            <button data-id="1" class="btn btn-danger">SIM</button>
+            <button data-id="0" class="btn btn-secondary">NÃO</button>
+        </div>
+    </div>
+</body>
+
+</html>
